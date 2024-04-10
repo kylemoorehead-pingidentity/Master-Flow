@@ -7,15 +7,41 @@ admin_user_id             = ""
 dv_admin_username         = ""
 dv_admin_password         = ""
 organization_id           = ""
-
 #############
 #  PingOne  #
 #############
 
-environment_name = "PingOne Master Flow"
+environment_name = "PingOne Master Flow 1.1"
 environment_description = "This environment is based on the PingOne Master Flow. https://github.com/curtismu7/Master-Flow/releases/tag/master \n\n\n This environment is created and maintained utilizing the PingOne Terraform provider."
 environment_type = "SANDBOX"
 pingone_agreement_localization_revision_master_flow_agreement_en_now_text = "<h1>END-USER LICENSE AGREEMENT</h1><p>GDPR requires that organizations have a lawful basis for processing data. One such basis is consent, which according to the GDPR has to be explicit and freely given. This means that the mechanism for acquiring consent must be unambiguous and involve a clear affirmative action.<br><br>While you shouldn't ask for it if you're carrying out a core service or process personal data by law, you should ask for consent when you're offering a non-essential service, like sending marketing emails and newsletters.<br><br>Here's a breakdown of the most important things you must know about email consent under GDPR – with plenty of templates and examples of how to put them into action.</p>"
+
+master_flow_user_email                  = "master.flow@mailinator.com"
+master_flow_user_username               = "master.flow@mailinator.com"
+master_flow_user_password               = "2FederateM0re!"
+master_flow_user_password_force_change  = false
+master_flow_user_given_name             = "Master"
+master_flow_user_family_name            = "Flow"
+master_flow_user_middle_name            = ""
+master_flow_user_formatted_name         = "Master Flow"
+master_flow_user_honorific_prefix       = ""
+master_flow_user_honorific_suffix       = ""
+master_flow_user_title                  = "Grandmaster"
+master_flow_user_nickname               = ""
+master_flow_user_street_address         = "1001 17th St."
+master_flow_user_address_locality       = "Denver"
+master_flow_user_address_region         = "CO"
+master_flow_user_address_postal_code    = "80202"
+master_flow_user_address_country_code   = "US"
+master_flow_user_locale                 = "en-US"
+master_flow_user_preferred_language     = "en-US"
+master_flow_user_mfa_enabled            = true
+master_flow_user_mobile_phone           = "1234567890"
+master_flow_user_primary_phone          = "0123456789"
+master_flow_user_timezone               = "America/Denver"
+master_flow_user_type                   = ""
+master_flow_user_lifecycle_status       = "ACCOUNT_OK" #Accepted values: ACCOUNT_OK, VERIFICATION_REQUIRED
+master_flow_user_lifecycle_suppress_verification_code = true
 
 ###################
 #  External IDPs  #
@@ -24,8 +50,11 @@ davinci_variable_gv-googleLogin_value = "false"
 google_client_id=""
 google_client_secret=""
 
-# TODO: Implement additional external IDPs
 davinci_variable_gv-facebookLogin_value = "false"
+facebook_app_id=""
+facebook_app_secret=""
+
+# TODO: Implement additional external IDPs
 davinci_variable_gv-azureLogin_value = "false"
 davinci_variable_gv-githubLogin_value = "false"
 
@@ -36,11 +65,16 @@ davinci_variable_gv-githubLogin_value = "false"
 deployment_type = "REDIRECT"
 davinci_variable_origin_value = "https://auth.pingone.com"
 davinci_variable_gv-deviceManagement_value = "false"
+davinci_variable_gv-isDeviceManagement = "false"
 davinci_variable_gv-mfa-on_value = "false"
 davinci_variable_gv-runPasswordExpire_value = "false"
+davinci_variable_gv-fakeLevel = "false"
+davinci_variable_gv-riskScreenDisplay = "false"
 davinci_variable_gv-webAuthnSupport_value = "cross-platform"
 davinci_variable_gv-forgotPasswordDisplay_value = "false"
 davinci_variable_gv-standardForgotPassword_value = "false"
+davinci_variable_gv-mfaOnHighRisk = "false"
+davinci_variable_gv-runVerifyUserRegistration = "false"
 davinci_variable_gv-protectAfterSocial = "false"
 davinci_variable_gv-autoEnrollEmail = "false"
 davinci_variable_gv-registerAnotherDevice = "false"
@@ -68,3 +102,8 @@ davinci_variable_gv-forgotUsernameDisplay_value = "false"
 davinci_variable_origin_2_value = "https://auth.pingone.com"
 davinci_variable_gv-companyLogo_value = "https://assets.pingone.com/ux/ui-library/5.0.2/images/logo-pingidentity.png"
 davinci_connection_PingOne_region = "NA"
+davinci_variable_gv-captchaThreshold  = "0.7"
+davinci_variable_gv-reCaptcha         = "false"
+davinci_variable_gv-captchaV3SiteKey  = "6LfdK6QpAAAAALcGPNmzzyK4Baigr2UWjnL57ZIr"
+davinci_variable_gv-autoEnrollEmailMFA = "false"
+davinci_variable_gv-agreement = "true"
